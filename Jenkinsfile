@@ -29,7 +29,7 @@ pipeline {
         stage('Install Frontend Dependencies') {
             steps {
                 dir('frontend') {
-                    bat 'npm install'
+                    bat 'npm install --legacy-peer-deps'
                 }
             }
         }
