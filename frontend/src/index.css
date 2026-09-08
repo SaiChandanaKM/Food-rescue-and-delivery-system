@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light Theme (Default) */
+  :root {
+    --bg-main: #f8fafc;        /* slate-50 */
+    --bg-card: #ffffff;        /* white */
+    --text-main: #0f172a;      /* slate-900 */
+    --text-muted: #64748b;     /* slate-500 */
+    --border-main: #e2e8f0;    /* slate-200 */
+    --bg-secondary: #f1f5f9;   /* slate-100 */
+  }
+
+  /* Dark Theme */
+  .dark {
+    --bg-main: #020617;        /* slate-950 */
+    --bg-card: #0f172a;        /* slate-900 */
+    --text-main: #f8fafc;      /* slate-50 */
+    --text-muted: #94a3b8;     /* slate-400 */
+    --border-main: #1e293b;    /* slate-850 */
+    --bg-secondary: #0b0f19;   /* slate-950 dark */
+  }
+
+  body {
+    @apply bg-app-main text-app-main min-h-screen font-sans antialiased transition-colors duration-300;
+    margin: 0;
+  }
+}
+
+/* Custom Semantic Classes mapping to variables */
+.bg-app-main {
+  background-color: var(--bg-main);
+}
+.bg-app-card {
+  background-color: var(--bg-card);
+}
+.bg-app-secondary {
+  background-color: var(--bg-secondary);
+}
+.text-app-main {
+  color: var(--text-main);
+}
+.text-app-muted {
+  color: var(--text-muted);
+}
+.border-app-main {
+  border-color: var(--border-main);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full hover:bg-slate-400 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors;
+}

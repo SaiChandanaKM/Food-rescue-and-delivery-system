@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment Variables
+.env
+**/.env
+.env.local
+.env.*.local
+
+# Production builds
+dist/
+**/dist/
+build/
+**/build/
+
+# Local file uploads (fallback storage)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
