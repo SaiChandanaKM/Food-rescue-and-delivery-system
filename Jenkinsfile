@@ -8,6 +8,7 @@ pipeline {
     environment {
         BACKEND_IMAGE  = 'rescuemeal-backend'
         FRONTEND_IMAGE = 'rescuemeal-frontend'
+        DOCKER_HOST    = 'tcp://localhost:2375'
     }
 
     stages {
